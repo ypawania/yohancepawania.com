@@ -3,7 +3,7 @@ import CopyEmailLink from "./components/copy-email-link";
 import TextLink from "./components/text-link";
 
 export default function Home() {
-  const webringUrl = "https://cs.uwatering.com/#https://yohancepawania.dev";
+  const webringUrl = "https://cs.uwatering.com/#https://yohancepawania.com";
 
   return (
     <main className="mx-auto flex w-full max-w-2xl flex-col px-6 pb-8 sm:pb-10">
