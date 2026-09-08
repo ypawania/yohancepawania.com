@@ -6,29 +6,15 @@ export default function Home() {
   const webringUrl = "https://cs.uwatering.com/#https://yohancepawania.com";
 
   return (
-    <main className="mx-auto flex w-full max-w-2xl flex-col px-6 pb-8 sm:pb-10">
-      <div className="flex flex-col gap-10 sm:gap-12">
+    <main className="mx-auto flex min-h-svh w-full max-w-2xl flex-col justify-center px-6 py-10 sm:py-12">
+      <div className="flex flex-col gap-8 sm:gap-10">
         <section id="top" className="space-y-4">
           <h1 className="text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-[2rem]">
             Yohance Pawania
           </h1>
-          <div className="space-y-4">
-            <p className="max-w-xl text-base leading-relaxed text-[var(--muted-strong)]">
-              i&apos;m an incoming computer science student at
-              the university of waterloo interested in compilers, machine learning, and embedded systems.
-            </p>
-            <p className="max-w-xl text-sm leading-relaxed text-[var(--muted-strong)] sm:text-base">
-            at this stage, i&apos;m mostly focused on exploring and sidequesting. currently, i am learning semiconductor physics
-            and building chips at the <TextLink href="https://www.waterloofab.com/"><i>hacker fab</i></TextLink>. 
-            i&apos;ve also been learning ml, messing around with my home server, 
-            distrohopping on linux, and making pcbs. 
-
-            </p>
-            <p className="max-w-xl text-sm leading-relaxed text-[var(--muted)] sm:text-base">
-              i like bouldering, biking, and reading. mainly sci-fi and classics. i also watch video essays about movies! 
-              hmu if you&apos;d like to chat :) 
-            </p>
-          </div>
+          <p className="font-mono text-sm tracking-[0.08em] text-[var(--muted)]">
+            computer science @ uwaterloo
+          </p>
         </section>
 
         <section id="recents" className="space-y-4">
@@ -37,8 +23,8 @@ export default function Home() {
           </h2>
           <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-[var(--muted-strong)] sm:text-base">
             <li>built embedded telemetry software [and played with humanoid robots] @ <TextLink href="https://www.geotab.com">geotab</TextLink></li>
-            <li>interned at <span className="inline-flex items-center gap-1 whitespace-nowrap"><Image src="/assets/Sunnybrook.png" alt="Sunnybrook" width={16} height={16} className="h-[1em] w-auto" /><TextLink href="https://www.sunnybrook.ca">sunnybrook</TextLink></span>, designing PCBs for noninvasive brain surgery</li>
-            <li>organized <span className="inline-flex items-center gap-1 whitespace-nowrap">canada&apos;s largest high school <Image src="/assets/eurekahacks-logo.svg" alt="Eurekahacks" width={16} height={16} className="h-[1em] w-auto" /> <TextLink href="https://2025.eurekahacks.ca/">hackathon</TextLink> </span></li>
+            <li>interned at <TextLink href="https://www.sunnybrook.ca">sunnybrook</TextLink>, designing PCBs for noninvasive brain surgery</li>
+            <li>organized canada&apos;s largest high school <TextLink href="https://2025.eurekahacks.ca/">hackathon</TextLink></li>
             <li>built modular e-bike conversion kits [backed by <TextLink href="https://www.bloomberg.org">bloomberg philanthropies</TextLink>]</li>
             <li>led firmware development for my school&apos;s electric racekart team</li>
           </ul>

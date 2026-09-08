@@ -36,4 +36,4 @@ npm run start
 
 ## Notes
 
-This repository contains the source for `yohancepawania.dev`.
+This repository contains the source for `yohancepawania.com`.

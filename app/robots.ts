@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://yohancepawania.dev/sitemap.xml",
+    sitemap: "https://yohancepawania.com/sitemap.xml",
   };
 }

@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import CommandPalette from "./components/command-palette";
-import SiteHeader from "./components/site-header";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -19,7 +18,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yohancepawania.dev"),
+  metadataBase: new URL("https://yohancepawania.com"),
   title: "Yohance Pawania",
   description:
     "Yohance Pawania is a computer science student interested in embedded software, electronics, robotics, and low-level computing.",
@@ -30,7 +29,7 @@ export const metadata: Metadata = {
     title: "Yohance Pawania",
     description:
       "Computer science student building embedded software, electronics, robotics, and hardware/software projects.",
-    url: "https://yohancepawania.dev",
+    url: "https://yohancepawania.com",
     siteName: "Yohance Pawania",
     type: "website",
   },
@@ -70,9 +69,8 @@ export default function RootLayout({
             })();
           `}
         </Script>
-        <SiteHeader />
         {children}
-        <CommandPalette repoUrl="https://github.com/ypawania/yohancepawania.dev" />
+        <CommandPalette repoUrl="https://github.com/ypawania/yohancepawania.com" />
         <Analytics />
       </body>
     </html>

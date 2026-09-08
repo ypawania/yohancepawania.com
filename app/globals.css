@@ -77,32 +77,18 @@ body {
   }
 }
 
-.nav-link {
-  color: var(--muted);
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
-  transition: color 150ms ease;
-}
-
-.nav-link:hover {
-  color: var(--foreground);
-}
-
-.nav-link-active {
-  color: var(--accent);
-}
-
 .social-link {
   color: var(--muted);
   display: inline-block;
   position: relative;
   text-decoration: none;
-  transition: color 150ms ease;
+  transition: background-color 150ms ease, color 150ms ease;
 }
 
 .social-link:hover {
+  background: var(--surface-strong);
   color: var(--accent);
+  font-style: italic;
 }
 
 .webring-link:hover img {
@@ -121,34 +107,14 @@ body {
   display: block;
 }
 
-.theme-button {
-  border: 0;
-  background: transparent;
-  color: var(--muted);
-  box-shadow: none;
-}
-
-.theme-button:hover {
-  background: var(--surface);
-  color: var(--accent);
-}
-
-.theme-button:focus,
-.theme-button:focus-visible,
-.theme-button:active {
-  outline: none;
-  box-shadow: none;
-}
-
 .text-link {
   color: var(--link);
   display: inline-block;
   position: relative;
   text-decoration: none;
-  transition: color 150ms ease;
+  transition: background-color 150ms ease, color 150ms ease;
 }
 
-.nav-link:not(.nav-link-active)::after,
 .social-link::after,
 .text-link::after {
   position: absolute;
@@ -162,7 +128,6 @@ body {
   pointer-events: none;
 }
 
-.nav-link:not(.nav-link-active)::before,
 .social-link::before,
 .text-link::before {
   position: absolute;
@@ -179,7 +144,6 @@ body {
   transform-origin: left;
 }
 
-.nav-link:not(.nav-link-active):hover::before,
 .social-link:hover::before,
 .text-link:hover::before {
   animation: sweep 500ms ease-in-out forwards;
@@ -187,7 +151,9 @@ body {
 }
 
 .text-link:hover {
+  background: var(--surface-strong);
   color: var(--accent);
+  font-style: italic;
 }
 
 .tooltip-surface {

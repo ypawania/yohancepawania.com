@@ -4,7 +4,6 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { Command } from "cmdk";
 import {
   ArrowUp,
-  BookOpen,
   ExternalLink,
   GitBranch,
   Home,
@@ -12,7 +11,6 @@ import {
   Mail,
   Moon,
   Palette,
-  PanelsTopLeft,
   Search,
   Sun,
 } from "lucide-react";
@@ -78,15 +76,6 @@ export default function CommandPalette({ repoUrl }: CommandPaletteProps) {
     command();
   }
 
-  const goToPath = useCallback((path: string) => {
-    if (pathname === path) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      return;
-    }
-
-    router.push(path);
-  }, [pathname, router]);
-
   const goToHomeSection = useCallback((id: string) => {
     if (pathname === "/") {
       scrollToId(id);
@@ -146,12 +135,6 @@ export default function CommandPalette({ repoUrl }: CommandPaletteProps) {
       if (key === "h") {
         event.preventDefault();
         runCommand(() => goToHomeSection("top"));
-      } else if (key === "b") {
-        event.preventDefault();
-        runCommand(() => goToPath("/blog"));
-      } else if (key === "p") {
-        event.preventDefault();
-        runCommand(() => goToPath("/projects"));
       } else if (key === "g") {
         event.preventDefault();
         runCommand(() => window.open("https://github.com/ypawania", "_blank"));
@@ -195,7 +178,7 @@ export default function CommandPalette({ repoUrl }: CommandPaletteProps) {
       document.removeEventListener("keyup", handleKeyUp);
       window.removeEventListener("blur", handleBlur);
     };
-  }, [goToHomeSection, goToPath, open, repoUrl, toggleTheme]);
+  }, [goToHomeSection, open, repoUrl, toggleTheme]);
 
   if (isMobileDevice) {
     return null;
@@ -248,24 +231,6 @@ export default function CommandPalette({ repoUrl }: CommandPaletteProps) {
                   <Home className="h-4 w-4" />
                   <span className="flex-1">Go to Home</span>
                   <Shortcut isShiftPressed={isShiftPressed}>H</Shortcut>
-                </Command.Item>
-                <Command.Item
-                  value="blog writing notes"
-                  onSelect={() => runCommand(() => goToPath("/blog"))}
-                  className="palette-item flex cursor-pointer items-center gap-2 rounded px-3 py-2 text-sm"
-                >
-                  <BookOpen className="h-4 w-4" />
-                  <span className="flex-1">Go to Blog</span>
-                  <Shortcut isShiftPressed={isShiftPressed}>B</Shortcut>
-                </Command.Item>
-                <Command.Item
-                  value="projects builds work"
-                  onSelect={() => runCommand(() => goToPath("/projects"))}
-                  className="palette-item flex cursor-pointer items-center gap-2 rounded px-3 py-2 text-sm"
-                >
-                  <PanelsTopLeft className="h-4 w-4" />
-                  <span className="flex-1">Go to Projects</span>
-                  <Shortcut isShiftPressed={isShiftPressed}>P</Shortcut>
                 </Command.Item>
                 <Command.Item
                   value="top scroll back up"
